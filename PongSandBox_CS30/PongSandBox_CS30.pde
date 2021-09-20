@@ -2,7 +2,9 @@
 float ballX, ballY, ballDiameter;
 int ballXSpeed, ballYSpeed;
 float leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight;
+float rightPaddleX, rightPaddleY, rightpaddleWidth, rightPaddleHeight;
 int leftPaddleMove;
+int rightPaddleMove;
 
 void setup() {
   size(600, 500);
