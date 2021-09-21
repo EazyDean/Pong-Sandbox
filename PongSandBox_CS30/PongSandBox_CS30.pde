@@ -2,7 +2,7 @@
 float ballX, ballY, ballDiameter;
 int ballXSpeed, ballYSpeed;
 float leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight;
-float rightPaddleX, rightPaddleY, rightpaddleWidth, rightPaddleHeight;
+float rightPaddleX, rightPaddleY, rightPaddleWidth, rightPaddleHeight;
 int leftPaddleMove;
 int rightPaddleMove;
 
@@ -18,15 +18,22 @@ void setup() {
   leftPaddleY = (height * 1/2) - leftPaddleHeight*1/2;
   leftPaddleWidth = width * 1/40;
   leftPaddleMove = width * 0;
+  rightPaddleX = width * 18/20;
+  rightPaddleHeight = height * 1/2;
+  rightPaddleY = (height * 1/2) - rightPaddleHeight*1/2;
+  rightPaddleWidth = width * 1/40;
+  rightPaddleMove = width * 0;
   //
   ellipse (ballX, ballY, ballDiameter, ballDiameter);
   rect(leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
+  rect(rightPaddleX, rightPaddleY, rightPaddleWidth, rightPaddleHeight);
   println(leftPaddleY);
+  println(rightPaddleY);
   
 }
 
 void draw() {
-  background (0);
+   background (0);
   ballX = ballX + ballXSpeed;
   ballY = ballY + ballYSpeed;
   //
@@ -37,6 +44,7 @@ void draw() {
   if (ballY > height) ;
   if (ballY < height*0) ballY = height*0 ;
   rect (leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
+  rect (rightPaddleX, rightPaddleY, rightPaddleWidth, rightPaddleHeight);
   ellipse (ballX, ballY, ballDiameter, ballDiameter);
   }
   
