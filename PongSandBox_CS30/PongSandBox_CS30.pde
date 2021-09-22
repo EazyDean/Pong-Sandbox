@@ -53,10 +53,16 @@ void draw() {
     if (key == CODED) {
      if (key == CODED) {
     if (keyCode == UP) {
+      rightPaddleY = rightPaddleY - 1;
+    }
+    if (keyCode == DOWN) rightPaddleY = rightPaddleY + 1; 
+    }
+    }
+    if (key == 'w') {
       leftPaddleY = leftPaddleY - 1;
     }
-    if (keyCode == DOWN) leftPaddleY = leftPaddleY + 1; 
-    }
+    if (key == 's') {
+      leftPaddleY = leftPaddleY + 1;
     }
   }
   
