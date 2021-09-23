@@ -44,7 +44,7 @@ void draw() {
   if (ballY > height) ;
   if (ballY < height*0) ballY = height*0 ;
   
-}
+
 
   rect (leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
   rect (rightPaddleX, rightPaddleY, rightPaddleWidth, rightPaddleHeight);
