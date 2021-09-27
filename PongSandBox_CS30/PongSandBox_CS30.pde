@@ -43,7 +43,11 @@ void draw() {
   if (ballY > height || ballY < height*0) ballYSpeed = ballYSpeed * -1; 
   if (ballY > height) ;
   if (ballY < height*0) ballY = height*0 ;
-  
+   if ( ballX < rightPaddleWidth && ballY < rightPaddleHeight ){
+    ballX = ballXSpeed * -1;
+  }
+
+ 
 
 
   rect (leftPaddleX, leftPaddleY, leftPaddleWidth, leftPaddleHeight);
