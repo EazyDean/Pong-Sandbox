@@ -1,6 +1,6 @@
 class Ball {
   //Variables
-  int ballX, ballY, ballMoveX, ballMoveY, directionX, directionY;
+  int ballX, ballY, ballMoveX, ballMoveY, directionX=0, directionY=0;
   int ballSpeedX, ballSpeedY;
   int ballStartX, ballStartY, ballDiameter; //Will be final
   color colour;
@@ -16,11 +16,11 @@ class Ball {
     ballStartY = int(height/2);  //See above
     this.ballX = ballStartX;
     this.ballY = ballStartY;
-    ballXGoal = ;
-    ballDiameter = ; //Will soon need a procedure for this or a choice of code
-    ballSpeedX = ;
-    ballSpeedY = ;
-    colour = ;
+    this.ballXGoal = false;
+    ballDiameter = int(width/70); //Will soon need a procedure for this or a choice of code
+    ballSpeedX = int( random (1, 5) ); //Not best practice to repeat code, but OK
+    ballSpeedY = int( random (1, 5) ); //Here b/c "next time"
+    colour = color(int( random(50, 200),g,b), int( random(50, 200),g,b), int( random(50, 200),g,b) );
   }//End Constructor
   //
   void ballDraw() {
@@ -29,7 +29,14 @@ class Ball {
   fill(0); //Reset fill
   }//End ballDraw
   //
-  void gameStart() {}//End gameStart
+  void gameStart() { //Complete the ball constructor, should be combined with speed
+  while (directionX == 0){
+    directionX = int (random (-2, 2) );
+  } //End WHILE for directionX
+  while (directionY == 0){
+    directionY = int (random (-2, 2) );
+  } //End WHILE for directionY
+  }//End gameStart
   //
   void gamePlay() {}//End gamePlay
 }//End Ball
