@@ -20,7 +20,7 @@ class Ball {
     ballDiameter = int(width/70); //Will soon need a procedure for this or a choice of code
     ballSpeedX = int( random (1, 5) ); //Not best practice to repeat code, but OK
     ballSpeedY = int( random (1, 5) ); //Here b/c "next time"
-    colour = color(int( random(50, 200),g,b), int( random(50, 200),g,b), int( random(50, 200),g,b) );
+    colour = color(int( random(50, 200) ), int( random(50, 200) ), int( random(50, 200) ));
   }//End Constructor
   //
   void ballDraw() {
@@ -38,5 +38,12 @@ class Ball {
   } //End WHILE for directionY
   }//End gameStart
   //
-  void gamePlay() {}//End gamePlay
-}//End Ball
+  void gamePlay() {
+  //Scoring on left and right goals, resetting variables to decrease system resources
+  //
+  //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"
+  //
+  //Ball "Step"
+  //Our ball is gonna be plain
+  }//End gamePlay
+} //End Ball

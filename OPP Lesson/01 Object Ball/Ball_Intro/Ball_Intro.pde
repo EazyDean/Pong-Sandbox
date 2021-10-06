@@ -1,9 +1,9 @@
 //Global Variables and Other
-Ball balls = new Ball[4]; //Not just an array, but an array list
+Ball[] balls = new Ball[4]; //Not just an array, but an array list
 
 void setup() {
-  size (); //fullScreen(), displayWidth, displayHeight;
-  balls = new Ball(width, height);
+  fullScreen(displayWidth, displayHeight);
+  balls[0] = new Ball(width, height);
   balls[0].ballDraw(); //Variables and construstor
   balls[0].gameStart(); //Completes Constructor, teaching opportunity
   
