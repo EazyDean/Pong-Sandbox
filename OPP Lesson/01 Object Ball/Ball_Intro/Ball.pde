@@ -24,26 +24,34 @@ class Ball {
   }//End Constructor
   //
   void ballDraw() {
-  fill(colour);
-  ellipse(ballX, ballY, ballDiameter, ballDiameter);
-  fill(0); //Reset fill
+    background(0);
+    fill(colour);
+    ellipse(ballX, ballY, ballDiameter, ballDiameter);
+    fill(0); //Reset fill
   }//End ballDraw
   //
   void gameStart() { //Complete the ball constructor, should be combined with speed
-  while (directionX == 0){
-    directionX = int (random (-2, 2) );
-  } //End WHILE for directionX
-  while (directionY == 0){
-    directionY = int (random (-2, 2) );
-  } //End WHILE for directionY
+    while (directionX == 0) {
+      directionX = int (random (-2, 2) );
+    } //End WHILE for directionX
+    while (directionY == 0) {
+      directionY = int (random (-2, 2) );
+    } //End WHILE for directionY
   }//End gameStart
   //
   void gamePlay() {
-  //Scoring on left and right goals, resetting variables to decrease system resources
-  //
-  //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"
-  //
-  //Ball "Step"
-  //Our ball is gonna be plain
+    //Scoring on left and right goals, resetting variables to decrease system resources
+    //
+    //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"
+    //
+    //Ball "Step"
+    if (ballXGoal == true) { //EMPTY IF to skip ball arithmetic, when score happends
+    } else {
+      ballMoveX = ballSpeedX*directionX;
+      ballMoveY = ballSpeedY*directionY;
+      ballX += ballMoveX;
+      ballY += ballMoveY;
+    }
+    //Our ball is gonna be plain
   }//End gamePlay
 } //End Ball
