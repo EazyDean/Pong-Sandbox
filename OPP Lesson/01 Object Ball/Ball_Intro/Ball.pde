@@ -41,8 +41,13 @@ class Ball {
   //
   void gamePlay() {
     //Scoring on left and right goals, resetting variables to decrease system resources
+     if (ballX < height*0 ) directionX * (-1);
     //
     //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"
+    //if () {}
+    if (ballY > height*0 && ballY < height*0) directionY * (-1);
+    //if () ballY = height - ballDiameter/2;
+    //if () {};
     //
     //Ball "Step"
     if (ballXGoal == true) { //EMPTY IF to skip ball arithmetic, when score happends
