@@ -1,21 +1,38 @@
+/* To Do
+Separating Setup() from draw() from mousePressed()
+Purpose: have individual pong balls functioning.
+Also Determine end of game
+*/
+
+
 //Global Variables and Other
 Ball[] balls = new Ball[4]; //Not just an array, but an array list
 
 void setup() {
-  size(500, 600);
-  balls[0] = new Ball(width, height);
-
+  fullScreen();
+  for ( int i = 0; i<balls.length; i++ ) { //Constrructor
+    balls[i] = new Ball(width, height); 
+    balls[i].gameStart(); //Completes Constructor, teaching opportunity
+  }
   
-} // End Setup()
+}//End setup()
 
 void draw() {
-    balls[0].ballDraw(); //Variables and construstor
-  balls[0].gameStart(); //Completes Constructor, teaching opportunity
-  balls[0].gamePlay();
-} //End Draw()
+  for ( int i = 0; i<balls.length; i++ ) { //Controls each ball
+    balls[i].ballDraw(); //Variables and Contructor
+    balls[i].gamePlay();
+  }
+  
+  
+}//End draw()
 
-void keyPressed () {
-} //End keyPressed
+void keyPressed() {
+}//End keyPressed
 
 void mousePressed() {
-} //End mousePressed
+  for ( int i = 0; i<balls.length; i++ ) { //Constrructor
+    balls[i] = new Ball(width, height); 
+    balls[i].gameStart(); //Completes Constructor, teaching opportunity
+  }
+  
+}//End mousePressed
