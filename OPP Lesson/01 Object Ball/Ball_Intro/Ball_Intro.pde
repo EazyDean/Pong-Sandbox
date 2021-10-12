@@ -1,6 +1,8 @@
 /* To Do
  Separating Setup() from draw() from mousePressed()
  Purpose: have individual pong balls functioning.
+ See ballCounter Variable in driver global variables
+ Note : Should be static, encapsulated variable in ball Class
  
  Also Determine end of game
  */
@@ -33,7 +35,7 @@ void keyPressed() {
 void mousePressed() {
   println(ballCounter);
   if ( ballCounter >= balls.length) { //Game Quit based on ball counting
-    exit();
+    exit(); //Eventually will become a button
   } else { 
     ballCounter += 1;
   }
