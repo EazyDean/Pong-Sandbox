@@ -25,7 +25,7 @@ class Ball {
   }//End Constructor
   //
   void ballDraw() {
-    background(255);
+    //Background here will cover each individual ball
     fill(colour);
     ellipse(ballX, ballY, ballDiameter, ballDiameter);
     fill(0); //Reset fill
