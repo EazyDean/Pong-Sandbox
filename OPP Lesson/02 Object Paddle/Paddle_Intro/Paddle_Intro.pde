@@ -22,10 +22,14 @@ void keyPressed() {
   paddle.upGetter(); //Security Feature
 }
    if (key == CODED && key == 'S' || key == 's') {
-   paddle.downGetter(); //Sexcurity Feature
+   paddle.downGetter(); //Security Feature
    }
-  if (key == CODED && key == UP) {}
-  if (key == CODED && key == DOWN) {}
+  if (key == CODED && key == UP) {
+  paddle.upGetter();
+  }
+  if (key == CODED && key == DOWN) {
+  paddle.downGetter();
+  }
 }//End keyPressed
 
 void mousePressed() {
