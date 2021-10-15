@@ -13,25 +13,15 @@ void setup() {
 
 void draw() {
   background(255);
-  println(paddle.up);
   paddle.paddleDraw();
 }//End draw()
 
 void keyPressed() {
-  if (key == CODED && key == 'W' || key == 'w') {
-  paddle.upGetter(); //Security Feature
-}
-   if (key == CODED && key == 'S' || key == 's') {
-   paddle.downGetter(); //Security Feature
-   }
-  if (key == CODED && key == UP) {
-  paddle.upGetter();
-  }
-  if (key == CODED && key == DOWN) {
-  paddle.downGetter();
-  }
+  if (key == CODED && key == 'W' || key == 'w') paddle.upLeftGetter(); //Security Feature
+  if (key == CODED && key == 'S' || key == 's') paddle.downLeftGetter(); //Security Feature
+  if (key == CODED && keyCode == UP) paddle.upRightGetter(); //Security Feature
+  if (key == CODED && keyCode == DOWN) paddle.downRightGetter(); //Security Feature
 }//End keyPressed
 
 void mousePressed() {
-  
 }//End mousePressed

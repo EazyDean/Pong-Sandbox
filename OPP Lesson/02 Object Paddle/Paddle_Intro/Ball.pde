@@ -46,11 +46,11 @@ class Ball {
       ballXGoal = true;
       if (ballX < (width*0)+ballDiameter ) { //Goal for left player
         ballX = (width*0)+(ballDiameter/4);
-        ballY = ballY; //Variable becomes "final" here      
+        ballY = ballY; 
       }
       if ( ballX > width - ballDiameter ) { //Goal for right player
         ballX = (width)-(ballDiameter/4);
-        ballY = ballY; //Variable becomes "final" here      
+        ballY = ballY;     
       }
     } //End Net Detection
     //
