@@ -46,11 +46,11 @@ class Ball {
       ballXGoal = true;
       if (ballX < (width*0)+ballDiameter ) { //Goal for left player
         ballX = (width*0)+(ballDiameter/4);
-        ballY = ballY; 
+        ballY = ballY; //Variable becomes "final" here      
       }
       if ( ballX > width - ballDiameter ) { //Goal for right player
         ballX = (width)-(ballDiameter/4);
-        ballY = ballY;     
+        ballY = ballY; //Variable becomes "final" here      
       }
     } //End Net Detection
     //
@@ -71,6 +71,7 @@ class Ball {
       ballX += ballMoveX;
       ballY += ballMoveY;
     }
+    if (ballX > paddle.length && ballY < paddle.length)
     //
   }//End gamePlay
   //
