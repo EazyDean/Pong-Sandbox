@@ -71,7 +71,6 @@ class Ball {
       ballX += ballMoveX;
       ballY += ballMoveY;
     }
-    if (ballX > paddle.length && ballY < paddle.length)
     //
   }//End gamePlay
   //
