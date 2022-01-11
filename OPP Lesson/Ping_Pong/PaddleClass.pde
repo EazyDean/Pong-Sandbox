@@ -1,10 +1,10 @@
 class Paddle {
   //Variables
-  color colour, white=#FFFFFF;
+  color colour;
   int paddleXLeft, paddleXRight, paddleYLeft, paddleYRight, paddleWidth, paddleHeight;
   int yMove; //Possible Easteregg to move paddles differently requires two vars
   boolean upLeft=false, downLeft=false, upRight=false, downRight=false;
-  int leftScore=0, rightScore=0;
+ int leftScore=0, rightScore=0;
   float leftBoardX, leftBoardY, boardSide, rightBoardX, rightBoardY;
   String left, right;
   float textSize;
@@ -23,7 +23,7 @@ class Paddle {
     this.upRight = false;
     this.downRight = false;
     this.yMove = int( (heightParameter / heightParameter) * 5);
-    boardSide = heightParameter*1/10;
+ boardSide = heightParameter*1/10;
     leftBoardX = paddleXLeft;
     leftBoardY = heightParameter*0;
     rightBoardX = paddleXRight-boardSide;
@@ -74,8 +74,8 @@ class Paddle {
     if ( paddleYRight < height * 0) paddleYRight = 0;
     if (paddleYRight > height - paddleHeight ) paddleYRight = height - paddleHeight;
     //
-    //Printing the Scoreboard
-    fill(white); //board background
+     //Printing the Scoreboard
+    fill(#0F0F0F); //board background
     //rect(leftBoardX, leftBoardY, boardSide, boardSide);
     //rect(rightBoardX, rightBoardY, boardSide, boardSide);
     fill(colour); //reset
@@ -107,4 +107,23 @@ class Paddle {
   void rightScoreSetter() { //Set Right Score Variable
     rightScore++;
   }
+  int paddleXLeftGetter() {
+    return paddleXLeft;
+  }//End Paddle X Left Getter
+  int paddleXRightGetter() {
+    return paddleXRight;
+  }//End Paddle X Left Getter
+  int paddleWidthGetter() {
+    return paddleWidth;
+  }//End Paddle X Left Getter
+  int paddleYLeftGetter() {
+    return paddleYLeft;
+  }//End Paddle X Left Getter
+  int paddleYRightGetter() {
+    return paddleYRight;
+  }//End Paddle X Left Getter
+  int paddleHeightGetter() {
+    return paddleHeight;
+  }//End paddleHeight Getter
+  //
 }//End Ball
