@@ -5,7 +5,7 @@ class Ball {
   int ballStartX, ballStartY, ballDiameter; //Will be final variables
   color colour;
   int scorePlayer1, scorePlayer2;
-  Boolean ballXGoal;
+  Boolean ballXLeftGoal=false, ballXRightGoal=false;
   //
   //int ballCount = 5; //requires pure java class for true static varaibles
   //needs to be coded first in Processing
@@ -16,7 +16,8 @@ class Ball {
     ballStartY = int(heightParameter/2); //see above
     this.ballX = ballStartX; //ALways starts in middle
     this.ballY = ballStartY;
-    this.ballXGoal = false;
+    this.ballXLeftGoal = false;
+    this.ballXRightGoal = false;
     ballDiameter = int(widthParameter/70); //Will soon need a procedure for this or a choice of code'
     ballSpeedX = int( random (1, 5) ); //Not best practice to repeat code, but OK
     ballSpeedY = int( random (1, 5) ); //Here b/c "next line"
@@ -41,16 +42,18 @@ class Ball {
   void gamePlay() {
     //Scoring on Left and Right Goals, resetting variables to decrease system resourses
     if ( ballX < (width*0)+ballDiameter || ballX > width - ballDiameter) { //Net Detection
-      ballXGoal = true;
       if (ballX < (width*0)+ballDiameter ) { //Goal for left player
+        ballXLeftGoal = true;
         ballX = (width*0)+(ballDiameter/4);
         ballY = ballY; //Variable becomes "final" here
       }
       if ( ballX > width - ballDiameter ) { //Goal for right player
+        ballXRightGoal = true;
         ballX = (width)-(ballDiameter/4);
         ballY = ballY; //Variable becomes "final" here
       }
     } //End Net Detection
+    println("1.", ballXLeftGoal, "\t2.", ballXRightGoal);
     //println(ballXGoal);
     //
     //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"
@@ -63,7 +66,7 @@ class Ball {
     }
     //
     //Ball "Step"
-    if (ballXGoal == true) { //EMPTY IF to skip ball arithmetic, when score happens
+    if (ballXLeftGoal == true || ballXRightGoal == true) { //EMPTY IF to skip ball arithmetic, when score happens
     } else {
       ballMoveX = ballSpeedX*directionX;
       ballMoveY = ballSpeedY*directionY;

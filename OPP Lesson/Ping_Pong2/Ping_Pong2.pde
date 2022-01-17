@@ -6,11 +6,11 @@
 Paddle paddle;
 //
 // From Ball_Intro Main Program
-int starNumbers = 50; //Will be a static variable, encapsulated
-Star[] stars = new Star[50];
+int starNumbers = 100; //Will be a static variable, encapsulated
+Star[] stars = new Star[100];
 Ball[] balls = new Ball[10]; //Not just an array, but an array list
 int ballCounter = balls.length - balls.length; // How to get "Zero but use another value"
-Boolean startMouse=false, startKeyboard=true;
+Boolean startMouse=true, startKeyboard=false;
 
 void setup() {
   fullScreen(); //fullScreen(), displayWidth, displayHeight;
@@ -27,16 +27,15 @@ void setup() {
 
 void draw() {
   background(0, 0);
-  for (int i=0; i<stars.length; i++) {
-      ellipse(stars[i].x, stars[i].y, stars[i].diameter, stars[i].diameter);
-      
-    }//End FOR
-  paddle.paddleDraw();
+   paddle.paddleDraw();
   for ( int i = 0; i<ballCounter; i++ ) { //Controls each ball
     balls[i].ballDraw(); //Variables and Contructor
     balls[i].gamePlay();
     balls[i].directionYSetter(paddle.paddleXLeftGetter(), paddle.paddleYLeftGetter(), paddle.paddleXRightGetter(), paddle.paddleYRightGetter(), paddle.paddleWidthGetter(), paddle.paddleHeightGetter());
   }
+  for (int i=0; i<stars.length; i++) {
+      ellipse(stars[i].x, stars[i].y, stars[i].diameter, stars[i].diameter);
+    }//End FOR
 }//End draw()
 
 void keyPressed() {

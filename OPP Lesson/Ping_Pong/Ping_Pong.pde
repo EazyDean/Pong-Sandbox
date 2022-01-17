@@ -10,7 +10,7 @@ Ball[] balls = new Ball[10]; //Not just an array, but an array list
 int ballCounter = balls.length - balls.length; // How to get "Zero but use another value"
 
 void setup() {
-  fullScreen(); //fullScreen(), displayWidth, displayHeight;
+  fullScreen();//fullScreen(), displayWidth, displayHeight;
   //
   paddle = new Paddle(width, height); //For the Constructor
   balls[ballCounter] = new Ball(width, height); 
