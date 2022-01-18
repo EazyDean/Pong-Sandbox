@@ -19,7 +19,7 @@ void setup() {
 }//End setup()
 
 void draw() {
-  background(255);
+  background(0);
   paddle.paddleDraw();
   for ( int i = 0; i<ballCounter; i++ ) { //Controls each ball
     balls[i].ballDraw(); //Variables and Contructor
