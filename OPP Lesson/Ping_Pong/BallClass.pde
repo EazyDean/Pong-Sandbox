@@ -4,8 +4,7 @@ class Ball {
   int ballSpeedX, ballSpeedY;
   int ballStartX, ballStartY, ballDiameter; //Will be final variables
   color colour;
-  int scorePlayer1, scorePlayer2;
-  Boolean ballXLeftGoal=false, ballXRightGoal=false;
+  int scorePlayer1, scorePlayer2;  Boolean ballXLeftGoal=false, ballXRightGoal=false;
   //
   //int ballCount = 5; //requires pure java class for true static varaibles
   //needs to be coded first in Processing
@@ -53,7 +52,6 @@ class Ball {
         ballY = ballY; //Variable becomes "final" here
       }
     } //End Net Detection
-    println("1.", ballXLeftGoal, "\t2.", ballXRightGoal);
     //println(ballXGoal);
     //
     //Top and Bottom Boundary Bounce, accounting for increased ball movement per "step"

@@ -22,7 +22,7 @@ class Paddle {
     this.downLeft = false;
     this.upRight = false;
     this.downRight = false;
-    this.yMove = int( (heightParameter / heightParameter) * 5);
+    this.yMove = int( (heightParameter / heightParameter) * 50);
  boardSide = heightParameter*1/10;
     leftBoardX = paddleXLeft;
     leftBoardY = heightParameter*0;
