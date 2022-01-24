@@ -12,7 +12,7 @@ Boolean[] leftScoreOff = new Boolean [balls.length]; //links to score so code is
 Boolean[] rightScoreOff = new Boolean [balls.length]; //links to score so code is skipped if ball is used once
 
 void setup() {
-  size(500,600);//fullScreen(), displayWidth, displayHeight;
+  fullScreen();//fullScreen(), displayWidth, displayHeight;
   //
   paddle = new Paddle(width, height); //For the Constructor
   balls[ballCounter] = new Ball(width, height); 

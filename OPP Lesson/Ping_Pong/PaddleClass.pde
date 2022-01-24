@@ -23,10 +23,10 @@ class Paddle {
     this.upRight = false;
     this.downRight = false;
     this.yMove = int( (heightParameter / heightParameter) * 50);
- boardSide = heightParameter*1/10;
-    leftBoardX = paddleXLeft;
-    leftBoardY = heightParameter*0;
-    rightBoardX = paddleXRight-boardSide;
+    boardSide = heightParameter*1/10;
+    leftBoardX = paddleXLeft+2;
+    leftBoardY = heightParameter*0.05;
+    rightBoardX = paddleXRight+10;
     rightBoardY = leftBoardY;
     textSize = width*1/10; //Algorithm takes geometry dimension side and *1/10 //If can exist in Constructor
   }//End Constructor
@@ -84,8 +84,8 @@ class Paddle {
     textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
     //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
     //See flatText (CS10) or dynamicText (CS20) or Processing.org for more text functions
-    text(Integer.toString(leftScore), leftBoardX, leftBoardY, boardSide, boardSide);
-    text(Integer.toString(rightScore), rightBoardX, rightBoardY, boardSide, boardSide);
+    text(Integer.toString(leftScore), leftBoardX, leftBoardY);
+    text(Integer.toString(rightScore), rightBoardX, rightBoardY);
   }//End gamePlay
   //
   // Getters and Setters
