@@ -52,7 +52,8 @@ class Ball {
         ballX = (width)-(ballDiameter/4);
         
       }
-    } //End Net Detection
+    }
+    //End Net Detection
      println("1.", ballXLeftGoal, "\t2.", ballXRightGoal);
     //println(ballXGoal);
     //

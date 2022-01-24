@@ -6,6 +6,7 @@
 Paddle paddle;
 //
 // From Ball_Intro Main Program
+Firework[] fireworks = new Firework[25];
 Ball[] balls = new Ball[10]; //Not just an array, but an array list
 int ballCounter = balls.length - balls.length; // How to get "Zero but use another value"
 Boolean[] leftScoreOff = new Boolean [balls.length]; //links to score so code is skipped if ball is used once
@@ -20,6 +21,9 @@ void setup() {
   for (int i=0; i<balls.length; i++) {
     leftScoreOff[i] = false;
     rightScoreOff[i] = false;
+  }
+  for (int i = 0; i < fireworks.length; i++) {
+    fireworks[i] = new Firework(width, height);
   }
   //
 }//End setup()
